@@ -15,7 +15,13 @@ a:hover {
     color: white;
     font-weight: bold;
 }
-#navigation {
+#navItem {
+    width: 16.25%;
+}
+ul#navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     font-size: 20px;
     background-color: white;
     color: black;
@@ -23,22 +29,62 @@ a:hover {
     position: fixed; 
     width: 100%;
     text-align: center;
-    padding-top: 0px;
-}
-#navItem {
-    width: 16%;
-}
-ul#navigation {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
+    overflow: hidden;
 }
 li#navItem {
     display: inline-block;
     padding-top: 20px;
     padding-bottom: 20px;
+    float: left;
+}
+#title {
+    font-size: 100px;
+    font-family: Brush Script MT, arial;
+    width: 100%;
+}
+#name {
+    text-align: center;
+    opacity: 0;
 }
 .headspace {
     margin-bottom: 50px;
+}
+@media only screen and (max-width: 1260px) 
+{
+    ul#navigation {
+        font-size: 16px;
+    }
+    .currentPage {
+        font-weight: none;
+    }
+}
+@media only screen and (max-width: 1060px) 
+{
+    #navItem {
+        width: 16%;
+    }
+    .currentPage {
+        padding: 5px 10px 5px 10px;
+    }
+}
+@media only screen and (max-width: 945px) 
+{
+    #navItem {
+        width: 15.5%;
+    }
+    .currentPage {
+        padding: 5px 10px 5px 10px;
+    }
+}
+@media only screen and (max-width: 750px) 
+{
+    li#navItem {
+        display: block;
+        float: none;
+        margin: 5px;
+        padding: 0;
+    }
+    #navItem {
+        width: 100%;
+    }
 }
