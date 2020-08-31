@@ -21,7 +21,7 @@ a:hover {
     color: black;
     font-family: geneva, arial;
     position: fixed; 
-    width:100%;
+    width: 100%;
     text-align: center;
     padding-top: 0px;
 }
@@ -38,4 +38,7 @@ li#navItem {
     display: inline-block;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+.headspace {
+    margin-bottom: 50px;
 }
