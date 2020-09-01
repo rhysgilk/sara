@@ -37,6 +37,36 @@ li#navItem {
     padding-bottom: 20px;
     float: left;
 }
+li#leftBody, li#rightBody {
+    display: inline-block;
+    float: left;
+}
+ul#mainBody {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#mainBody {
+    width: 100%;
+}
+#leftBody {
+    width: 80%;
+}
+#rightBody {
+    width: 20%;
+    text-align: center;
+}
+.rightBox {
+    border: 2px double black;
+    box-sizing: border-box;
+    border-width: 5px;
+    width: 80%;
+    height: 75px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding-top: 25px;
+    font-family: Garamond, arial;
+}
 #title {
     font-size: 100px;
     font-family: Brush Script MT, arial;
@@ -85,6 +115,24 @@ li#navItem {
         padding: 0;
     }
     #navItem {
+        width: 100%;
+    }
+    .headspace {
+        margin-bottom: 120px;
+    }
+}
+@media only screen and (max-width: 1134px) 
+{
+    .rightBox {
+        padding-top: 20px;
+    }
+}
+@media only screen and (max-width: 860px) 
+{
+    .rightBox {
+        visibility: hidden;
+    }
+    #leftBody {
         width: 100%;
     }
 }

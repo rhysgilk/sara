@@ -1,8 +1,87 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap" rel="stylesheet">
+
     <style type="text/css">
-        @media only screen and (max-height: 750px) 
+        hr {
+            border-top: 2px solid #CDB1EE;
+            width: 93%;
+        }
+        li#leftBody, li#rightBody, li#pic, li#bio {
+            display: inline-block;
+            float: left;
+        }
+        ul#mainBody, ul#col {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #mainBody {
+            width: 100%;
+            opacity: 0;
+        }
+        #leftBody {
+            width: 82%;
+        }
+        #rightBody {
+            margin-top: 20px;
+            width: 18%;
+            text-align: center;
+        }
+        .rightBox {
+            border: 1px solid #CDB1EE;
+            box-sizing: border-box;
+            border-width: 5px;
+            width: 80%;
+            height: 75px;
+            background-color: white;
+            margin-bottom: 50px;
+            padding-top: 25px;
+            font-family: Garamond, arial;
+        }
+        #title {
+            font-size: 100px;
+            font-family: 'Vollkorn', serif;
+            width: 100%;
+        }
+        #name {
+            text-align: center;
+            opacity: 0;
+        }
+        #col {
+            width: 100%;
+        }
+        #pic {
+            width: 20%;
+            margin-left: 50px;
+            margin-right: 20px;
+        }
+        #bio {
+            width: 70%;
+        }
+        #bioText {
+            font-size: 26px;
+            font-family: 'Vollkorn', serif;
+        }
+        #welcome {
+            font-size: 30px;
+        }
+        @media only screen and (max-width: 1260px) 
+        {
+            .rightBox {
+                padding-top: 20px;
+            }
+        }
+        @media only screen and (max-width: 980px) 
+        {
+            .rightBox {
+                visibility: hidden;
+            }
+            #leftBody {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -14,11 +93,31 @@
         <li id="navItem"><a href="mental.html">MENTAL<a></li>
         <li id="navItem"><a href="health.html">HEALTH/BEAUTY<a></li>
     </ul>
-    <div class="headspace">&nbsp</div><br />
-    <span id="title"><div id="name">Sara's Website</div></span>
+    <div class="headspace">&nbsp</div><br/>
+    <span id="title"><span id="name">LEGITARACY</span></span><br/>
+    <ul id="mainBody"><br/><br/>
+        <li id="leftBody">
+            <ul id="col">
+                <li id="pic">
+                    <img src="sarapic.png"/>
+                </li>
+                <li id="bio">
+                    <div id="welcome">WELCOME TO LEGITARACY!</div><br/>
+                    <div id="bioText">My name is Sara Gilkenson and I graduated from Bryant University in 2018. I majored in Business Management, Spanish and minored in Sociology! I am a College and Career Advisor in Central Falls, Rhode Island and I created this website to help people of all different backgrounds navigate their journey post graduation. I know first hand that it is difficult to apply to college or to a job and that is okay! This website will serve as an instructional guide to prepare you for your future. It is time to get legit and literate! :)</div>
+                </li>
+            </ul>
+        </li>
+        <li id="rightBody">
+            <div class="rightBox">SAT/COLLEGE BOARD</div>
+            <div class="rightBox">ESSAY/COMMON APP</div>
+            <div class="rightBox">FSA/FAFSA/CSS</div>
+            <div class="rightBox">SCHOLARSHIPS</div>
+        </li>
+    </ul>
     <script type="text/javascript">
         unfade(document.getElementById("navigation"));
         setTimeout(unfade, 1200, document.getElementById("name"));
+        setTimeout(unfade, 1200, document.getElementById("mainBody"));
         function unfade(element) {
             var op = 0;  // initial opacity
             op = 0.01
